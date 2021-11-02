@@ -5,7 +5,7 @@ const UpdateUserService = () => {
   const [userServices, setUserServices] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    const url = `http://localhost:5000//usersServices/${id}`;
+    const url = `https://murmuring-wildwood-53498.herokuapp.com/usersServices/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUserServices(data));
@@ -31,7 +31,7 @@ const UpdateUserService = () => {
     setUserServices(updatedUser);
   };
   const handleUpdateUser = (e) => {
-    const url = `http://localhost:5000//users/${id}`;
+    const url = `https://murmuring-wildwood-53498.herokuapp.com/users/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

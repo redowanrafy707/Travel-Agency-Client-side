@@ -11,12 +11,12 @@ const ServiceDetails = () => {
   const [data, setData] = useState([]);
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000//services")
+    fetch("https://murmuring-wildwood-53498.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5000//users")
+    fetch("https://murmuring-wildwood-53498.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);

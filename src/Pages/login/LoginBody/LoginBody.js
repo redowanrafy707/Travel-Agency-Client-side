@@ -17,7 +17,7 @@ const LoginBody = () => {
 
   const redirect_uri = location.state?.from || "/home";
   useEffect(() => {
-    fetch("http://localhost:5000//users")
+    fetch("https://murmuring-wildwood-53498.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -40,7 +40,7 @@ const LoginBody = () => {
           }
         }
         if (flag === 0) {
-          fetch("http://localhost:5000//users", {
+          fetch("https://murmuring-wildwood-53498.herokuapp.com/users", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(newUser),

@@ -8,14 +8,14 @@ import userImg from "./../../../Images/Users/user.png";
 const DBOne = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000//users")
+    fetch("https://murmuring-wildwood-53498.herokuapp.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);
   const handleDeleteUser = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?", id);
     if (proceed) {
-      const url = `http://localhost:5000//users/${id}`;
+      const url = `https://murmuring-wildwood-53498.herokuapp.com/users/${id}`;
       fetch(url, {
         method: "DELETE",
       })

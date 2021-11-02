@@ -5,14 +5,14 @@ import "./MyBooking.css";
 const MyBooking = () => {
   const [booking, setBooking] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000//usersServices")
+    fetch("https://murmuring-wildwood-53498.herokuapp.com/usersServices")
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, []);
   const handleDeleteUserService = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?", id);
     if (proceed) {
-      const url = `http://localhost:5000//usersServices/${id}`;
+      const url = `https://murmuring-wildwood-53498.herokuapp.com/usersServices/${id}`;
       fetch(url, {
         method: "DELETE",
       })
